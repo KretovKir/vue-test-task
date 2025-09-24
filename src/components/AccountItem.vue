@@ -25,7 +25,7 @@ function handleTypeChange(value: AccountType) {
 </script>
 
 <template>
-  <div style="border: 1px solid #eee; padding: 16px; margin: 12px 0; border-radius: 6px;">
+  <div class='container'>
     <NFormItem label="Метка" :show-feedback="false">
       <NInput
         v-model:value="account.label"
@@ -33,7 +33,7 @@ function handleTypeChange(value: AccountType) {
         maxlength="50"
         @blur="handleBlur('label')"
       />
-      <div style="font-size: 12px; color: #888; margin-top: 4px;">
+      <div class='description'>
         Максимум 50 символов. Ввод через ;
       </div>
     </NFormItem>
@@ -77,3 +77,19 @@ function handleTypeChange(value: AccountType) {
     </NButton>
   </div>
 </template>
+
+<style scoped>
+  .container{
+    border: 1px solid #eee;
+    padding: 16px; 
+    margin: 12px 0; 
+    border-radius: 6px;
+  }
+
+  .description{
+    font-size: 12px; 
+    color: #888; 
+    margin-top: 4px; 
+    margin-left: 10px
+  }
+</style>
